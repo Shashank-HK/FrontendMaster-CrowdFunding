@@ -1,0 +1,565 @@
+@import url('https://fonts.googleapis.com/css2?family=Commissioner&display=swap');
+:root {
+    --white: #1e90ff;
+    --off-white: #FAF9F6;
+    --moderate-cyan: hsl(176, 50%, 47%);
+    --dark-cyan: hsl(176, 72%, 28%);
+    --gray: #808080;
+    --light-gray: #DCDCDC;
+}
+
+html {
+    margin: 0;
+    height: 100%;
+}
+
+@media only screen and (min-width: 601px) {
+    body {
+        margin: 0;
+        height: 100%;
+        background: url("/images/image-hero-desktop.jpg") no-repeat center top;
+        background-size: 100% 50%;
+        font-size: 16px;
+        font-family: 'Commissioner';
+        font-weight: 400;
+        background-color: var(--off-white);
+        text-align: center;
+    }
+    .bold {
+        text-shadow: 1px 0 #000000;
+        letter-spacing: 1px;
+        font-weight: bold;
+        font-size: 28px;
+        font-weight: 600;
+    }
+    .secondary {
+        color: var(--gray);
+        line-height: 30px;
+    }
+    .inline {
+        display: inline;
+        vertical-align: middle;
+    }
+    .float_right {
+        float: right;
+    }
+    .margin_right {
+        margin-right: 15%;
+    }
+    .button {
+        background-color: var(--moderate-cyan);
+        border: none;
+        color: white;
+        padding: 0px 5%;
+        text-align: center;
+        text-decoration: none;
+        font-weight: bold;
+        display: inline-block;
+        border-radius: 30px;
+        cursor: pointer;
+        height: 50px;
+    }
+    .card {
+        margin-top: 30px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 55%;
+        background-color: white;
+        align-items: center;
+        border-radius: 10px;
+        box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+    }
+    .button:hover {
+        background-color: var(--dark-cyan);
+    }
+    .main {
+        margin-top: 15%;
+        padding-bottom: 5%;
+    }
+    .navbar {
+        color: var(--off-white);
+        margin-top: 2%;
+        width: 100%;
+        text-align: left;
+    }
+    #company {
+        margin-left: 7%;
+    }
+    #menu {
+        display: none;
+    }
+    .navbar_text {
+        margin-right: 30px;
+        display: inline;
+    }
+    .navbar_text:hover {
+        cursor: pointer;
+        font-weight: bold;
+    }
+    .info {
+        float: right;
+        margin-right: 4.5%;
+        margin-top: 1%;
+    }
+    .title_div {
+        overflow: hidden;
+    }
+    #title {
+        margin-top: 7%;
+        font-size: 26px;
+    }
+    #logo {
+        position: absolute;
+        margin-top: -6%;
+        margin-left: -3%;
+    }
+    #back {
+        float: left;
+        width: 180px;
+    }
+    #bookmark-button-default {
+        text-align: right;
+        background-color: var(--light-gray);
+        color: var(--gray);
+        float: right;
+        width: 150px;
+    }
+    #bookmark-logo-default {
+        position: absolute;
+        transform: translate(-120%, -35%);
+    }
+    #bookmark-button-selected {
+        display: none;
+        text-align: right;
+        background-color: #E8E8E8;
+        color: var(--dark-cyan);
+        float: right;
+        width: 150px;
+    }
+    #bookmark-logo-selected {
+        position: absolute;
+        transform: translate(-110%, -35%);
+    }
+    .buttons_div {
+        margin: 5% auto;
+        width: 80%;
+        overflow: hidden;
+    }
+    .fund_div {
+        margin-top: 30px;
+        padding-bottom: 20px;
+    }
+    .fund_info {
+        width: 100%;
+        overflow: hidden;
+    }
+    .info_element {
+        line-height: 5px;
+        width: 25%;
+        text-align: left;
+        margin: 5% 2%;
+        display: inline-block;
+        border-right: 2px solid var(--light-gray);
+    }
+    .progress_container {
+        height: 15px;
+        width: 90%;
+        margin: 20px auto;
+        border-radius: 30px;
+        background-color: var(--light-gray);
+    }
+    #progress-bar {
+        height: 15px;
+        max-width: 100%;
+        width: 90%;
+        border-radius: 30px;
+        background-color: var(--moderate-cyan);
+    }
+    .about_div {
+        margin-top: 30px;
+        text-align: left;
+        line-height: 30px;
+    }
+    .wrapper {
+        padding: 30px 40px;
+    }
+    .pledge_card {
+        margin-top: 5%;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 2px rgba(0, 0, 0, 0.4);
+    }
+    .pledge_title_div {
+        display: inline;
+    }
+    .pledge_title {
+        font-size: 18px;
+        display: inline-block;
+    }
+    .pledge_amount {
+        color: var(--moderate-cyan);
+        font-weight: bold;
+    }
+    .pledge_div {
+        overflow: hidden;
+    }
+    .reward_btn {
+        height: 50px;
+        width: 30%;
+        float: right;
+    }
+    .out_stock_card {
+        opacity: 0.5;
+    }
+    .out_stock_btn {
+        background-color: darkgray;
+    }
+    .out_stock_btn:hover {
+        background-color: darkgray;
+        cursor: default;
+    }
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        overflow: auto;
+        width: 100%;
+        height: 100%;
+        background-color: rgb(0, 0, 0);
+        background-color: rgba(0, 0, 0, 0.4);
+    }
+    .modal_content {
+        margin: 5% auto 5% auto;
+        text-align: left;
+        width: 55%;
+        overflow: auto;
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+    }
+    #close-modal:hover {
+        cursor: pointer;
+    }
+    .modal_card {
+        margin-top: 5%;
+        padding: 20px 20px 5px 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 2px rgba(0, 0, 0, 0.4);
+    }
+    .modal_info {
+        display: inline-block;
+        flex: 15;
+    }
+    .flex {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .modal_card:hover {
+        cursor: pointer;
+    }
+    .modal_card:hover .modal_button input~.checkmark {
+        border-color: var(--moderate-cyan);
+    }
+    .modal_card:hover .modal_info .pledge_div .pledge_title {
+        color: var(--moderate-cyan);
+        text-shadow: 1px 0 var(--moderate-cyan);
+    }
+    .modal_button {
+        flex: 1;
+        width: 15%;
+        display: block;
+        position: relative;
+        padding-left: 35px;
+        font-size: 22px;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+    .modal_card>input[type="radio"] {
+        margin-left: 20%;
+        margin-top: 20%;
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+    }
+    .checkmark {
+        margin-left: 20%;
+        margin-top: 20%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 25px;
+        width: 25px;
+        background-color: white;
+        border: 1.5px solid var(--light-gray);
+        border-radius: 50%;
+    }
+    .checkmark:after {
+        content: "";
+        position: absolute;
+        display: none;
+    }
+    .modal_card>input[type="radio"]:checked+.modal_button>.checkmark:after {
+        display: block;
+    }
+    .modal_card>input[type="radio"]:checked+.modal_button>.checkmark {
+        border-color: var(--moderate-cyan);
+    }
+    .modal_card>input[type="radio"]:checked~.modal_info>.pledge_div>.pledge_title {
+        color: var(--moderate-cyan);
+        text-shadow: 1px 0 var(--moderate-cyan);
+    }
+    .checkmark:after {
+        top: 6px;
+        left: 6px;
+        width: 13px;
+        height: 13px;
+        border-radius: 50%;
+        background: var(--moderate-cyan);
+    }
+    .out_stock_card_modal {
+        opacity: 0.5;
+    }
+    .out_stock_card_modal:hover {
+        cursor: default;
+    }
+    .out_stock_card_modal:hover .modal_button input~.checkmark {
+        border-color: var(--light-gray);
+    }
+    .out_stock_card_modal:hover .modal_info .pledge_div .pledge_title {
+        color: black;
+        text-shadow: 1px 0 black;
+    }
+    .choose_amount {
+        display: none;
+        border-top: 1px solid var(--light-gray);
+        padding-top: 3%;
+        padding-bottom: 3%;
+        width: 100%;
+        cursor: default;
+    }
+    .input_div {
+        text-align: center;
+        display: inline-block;
+        border: 1px solid var(--dark-cyan);
+        border-radius: 30px;
+        height: 50px;
+        width: 20%;
+        margin-right: 4%;
+        margin-left: 30%;
+        font-weight: bold;
+    }
+    .input_text {
+        margin-top: 2px;
+        margin-left: 3px;
+        width: 35%;
+        height: 90%;
+        font-size: 16px;
+        font-weight: bold;
+        outline: none;
+        border: none;
+        text-shadow: 1px 0 #000000;
+        letter-spacing: 1px;
+        caret-color: var(--dark-cyan);
+    }
+    .cont {
+        height: 50px;
+    }
+    .modal_card>input[type="radio"]:checked~.choose_amount {
+        display: block;
+    }
+    #success-container {
+        width: 40%;
+    }
+    #success-info {
+        text-align: center;
+    }
+    #success-button {
+        width: 30%;
+        margin: 5% auto;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    body {
+        background: url("/images/image-hero-mobile.jpg") no-repeat top;
+        background-size: 100% 40%;
+        background-color: var(--off-white);
+    }
+    .info {
+        display: none;
+    }
+    .main {
+        margin-top: 60%;
+    }
+    .card {
+        width: 80%;
+    }
+    #company {
+        margin-top: 5%;
+    }
+    #menu {
+        display: inline;
+        float: right;
+        margin-right: 4.5%;
+        margin-top: 7%;
+    }
+    #logo {
+        position: absolute;
+        margin-top: -17%;
+        margin-left: -5%;
+    }
+    #title {
+        font-size: 20px;
+        margin-top: 15%;
+    }
+    .wrapper_top {
+        padding: 0 8%;
+    }
+    .buttons_div {
+        width: 100%;
+        margin-bottom: 15%;
+    }
+    #back {
+        width: 170px;
+        height: 55px;
+    }
+    #bookmark-button-default>span,
+    #bookmark-button-selected>span {
+        display: none;
+    }
+    #bookmark-button-default {
+        float: none;
+        padding: 0;
+        border-radius: 0;
+        width: 57px;
+        height: 57px;
+        background-color: white;
+    }
+    #bookmark-button-selected {
+        padding: 0;
+        float: none;
+        width: 57px;
+        height: 57px;
+        border-radius: 0;
+        background-color: white;
+    }
+    #bookmark-logo-default {
+        position: static;
+        transform: none;
+    }
+    #bookmark-logo-selected {
+        position: relative;
+        transform: none;
+    }
+    .fund_info {
+        text-align: center;
+    }
+    .info_element {
+        text-align: center;
+        width: 100%;
+    }
+    .info_element::after {
+        margin: auto;
+        content: '';
+        border-bottom: 1px solid var(--gray);
+        margin-bottom: -10px;
+        width: 30%;
+        display: block;
+    }
+    .info_element:last-child::after {
+        content: '';
+        border-bottom: none;
+        margin-top: -20px;
+    }
+    .pledge_amount {
+        margin-top: -5%;
+        width: 100%;
+    }
+    .reward_btn {
+        height: 50px;
+        width: 80%;
+        float: none;
+        margin-top: 10%;
+        display: block;
+    }
+    .modal_content {
+        margin: 5% auto 5% auto;
+        text-align: left;
+        width: 85%;
+        overflow: auto;
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+    }
+    .modal_info .pledge_div {
+        display: flex;
+        flex-direction: column;
+    }
+    .pledge_title_div {
+        margin-left: 20%;
+        order: 1;
+    }
+    .pledge_title,
+    .pledge_amount {
+        display: block;
+        line-height: 30px;
+    }
+    .modal_button {
+        position: absolute;
+        margin-left: -3%;
+    }
+    .modal_info .pledge_quant {
+        order: 3;
+    }
+    .modal_info .pledge_text {
+        order: 2;
+    }
+    .modal_card>.choose_amount>form {
+        text-align: center;
+    }
+    .modal_card>.choose_amount>form>p:first-child {
+        display: block;
+    }
+    .modal_card>.choose_amount>form>.input_div {
+        margin-left: 2%;
+        width: 40%;
+    }
+    .cont {
+        width: 40%;
+    }
+    #success-container {
+        width: 70%;
+    }
+    #success-button {
+        width: 40%;
+        margin: 5% auto;
+    }
+    #menu-close {
+        float: right;
+        transform: translate(-150%, 250%);
+    }
+    #menu-container {
+        margin: 20% auto 5% auto;
+        text-align: left;
+        width: 80%;
+        overflow: auto;
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+    }
+    .menu_item {
+        font-weight: bold;
+        display: block;
+        border-bottom: 1px solid var(--light-gray);
+        padding: 2% 10%;
+    }
+    .menu_item:last-child {
+        border-bottom: none;
+    }
+}
